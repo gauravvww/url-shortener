@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "gauravs-awesome-url-shortener",
+  "name": "my-url-shortener",
   "builds": [
     {
       "src": "server.js",
@@ -9,7 +9,19 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",           
+      "dest": "index.html"
+    },
+    {
+      "src": "/styles.css",     
+      "dest": "styles.css"
+    },
+    {
+      "src": "/script.js",      
+      "dest": "script.js"
+    },
+    {
+      "src": "/(.*)",      
       "dest": "server.js"
     }
   ]
