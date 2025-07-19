@@ -4,11 +4,12 @@ const { nanoid } = require('nanoid');
 const connectDB = require('./db');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; 
 let db;
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(__dirname));
 
 connectDB().then(database => {
   db = database;
