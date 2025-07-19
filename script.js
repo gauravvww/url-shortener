@@ -6,7 +6,8 @@ shortenBtn.addEventListener('click', async()=>{
     const urlToShorten = longUrlInput.value;
 
     try{
-        const response = await fetch('http://localhost:3000/shorten', {
+        const apiBaseUrl = window.location.origin; 
+        const response = await fetch(`${apiBaseUrl}/shorten`,  {
             method : 'POST',
             headers:{
                 'Content-Type': 'application/json'
