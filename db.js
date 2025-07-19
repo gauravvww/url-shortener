@@ -2,8 +2,7 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const uri = process.env.MONGODB_URI;
 if(!uri){
-  console.error("MONGODB_URI environment variable is not set.");
-  process.exit(1);
+  throw new Error("Critical Initialization Error: MONGODB_URI environment variable is not set. Cannot connect to database.");
 }
 
 const client = new MongoClient(uri, {
