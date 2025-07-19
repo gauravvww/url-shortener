@@ -72,8 +72,8 @@ button:active {
 #resultArea {
     margin-top: 10px;
     padding: 15px;
-    background-color: #e0ffe0;
-    border: 1px dashed #4CAF50;
+    background-color: #f5f7f5;
+    border: 1px dashed #0b0f0b;
     border-radius: 8px;
     text-align: center;
     word-break: break-all;
