@@ -1,33 +1,101 @@
 body {
-    font-family: sans-serif;
-    background-color: #aedec1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: 	rgb(175, 226, 185);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #d8a172;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    box-sizing: border-box;
 }
 
 h1 {
-    color: #333;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    text-align: center;
 }
 
-input, button {
-    font-size: 1rem;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 5px;
+input[type="text"], button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    border: 1px solid #dcdcdc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
 }
 
 button {
-    background-color: #007bff;
+    background-color: #4CAF50;
     color: white;
     cursor: pointer;
     border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#resultArea {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #e0ffe0;
+    border: 1px dashed #4CAF50;
+    border-radius: 8px;
+    text-align: center;
+    word-break: break-all;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 20px 15px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
 }
